@@ -2,12 +2,26 @@ package com.ynn.muscirecords.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="artist")
 public class Artist implements Serializable {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int artistId;
+	
+	@Column(name="artist_name")
 	private String artistName;
+	@Column(name="artist_description")
 	private String artistDescription;
+	@Column(name="artist_formation_year")
 	private int artistFormationYear;
 	
 	
