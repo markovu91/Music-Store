@@ -1,5 +1,9 @@
 package com.ynn.muscirecords.model;
 
-public class Artist {
+import java.io.Serializable;
+
+public class Artist implements Serializable {
+	
+	
 
 }
