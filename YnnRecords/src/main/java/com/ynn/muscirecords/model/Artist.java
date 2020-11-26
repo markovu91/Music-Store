@@ -10,6 +10,7 @@ public class Artist implements Serializable {
 	private String artistDescription;
 	private int artistFormationYear;
 	
+	
 	public Artist() {}
 
 	public int getArtistId() {
