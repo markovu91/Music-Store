@@ -15,7 +15,7 @@ public class Artist implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int artistId;
+	private int id_artist;
 	
 	@Column(name="artist_name")
 	private String artistName;
@@ -27,12 +27,14 @@ public class Artist implements Serializable {
 	
 	public Artist() {}
 
-	public int getArtistId() {
-		return artistId;
+	
+	
+	public int getId_artist() {
+		return id_artist;
 	}
 
-	public void setArtistId(int artistId) {
-		this.artistId = artistId;
+	public void setId_artist(int id_artist) {
+		this.id_artist = id_artist;
 	}
 
 	public String getArtistName() {

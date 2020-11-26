@@ -17,7 +17,7 @@ public class Album implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int albumId;
+	private int id_album;
 	
 	@Column(name = "album_title")
 	private String albumTitle;
