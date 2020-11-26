@@ -1,6 +1,7 @@
 package com.ynn.muscirecords.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -19,6 +21,7 @@ public class Album implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id_album")
 	private int id_album;
 	
 	@Column(name = "album_title")
@@ -46,7 +49,134 @@ public class Album implements Serializable {
 	@JoinColumn(name = "id_artist")
 	private Artist artist;
 	
+	@OneToMany(mappedBy = "album")
+	private List<Track> tracks;
+	
+	
 	public Album() {}
+
+	
+
+	public Album(int id_album, String albumTitle, int albumReleaseYear, String albumCoverArt, double albumPrice,
+			String albumCatalogNumber, String albumEdition, int albumQuantity, Artist artist, List<Track> tracks) {
+		super();
+		this.id_album = id_album;
+		this.albumTitle = albumTitle;
+		this.albumReleaseYear = albumReleaseYear;
+		this.albumCoverArt = albumCoverArt;
+		this.albumPrice = albumPrice;
+		this.albumCatalogNumber = albumCatalogNumber;
+		this.albumEdition = albumEdition;
+		this.albumQuantity = albumQuantity;
+		this.artist = artist;
+		this.tracks = tracks;
+	}
+
+
+
+	public List<Track> getTracks() {
+		return tracks;
+	}
+
+
+
+
+	public void setTracks(List<Track> tracks) {
+		this.tracks = tracks;
+	}
+
+
+
+
+	public int getId_album() {
+		return id_album;
+	}
+
+	public void setId_album(int id_album) {
+		this.id_album = id_album;
+	}
+
+	public String getAlbumTitle() {
+		return albumTitle;
+	}
+
+	public void setAlbumTitle(String albumTitle) {
+		this.albumTitle = albumTitle;
+	}
+
+	public int getAlbumReleaseYear() {
+		return albumReleaseYear;
+	}
+
+	public void setAlbumReleaseYear(int albumReleaseYear) {
+		this.albumReleaseYear = albumReleaseYear;
+	}
+
+	public String getAlbumCoverArt() {
+		return albumCoverArt;
+	}
+
+	public void setAlbumCoverArt(String albumCoverArt) {
+		this.albumCoverArt = albumCoverArt;
+	}
+
+	public double getAlbumPrice() {
+		return albumPrice;
+	}
+
+	public void setAlbumPrice(double albumPrice) {
+		this.albumPrice = albumPrice;
+	}
+
+	public String getAlbumCatalogNumber() {
+		return albumCatalogNumber;
+	}
+
+	public void setAlbumCatalogNumber(String albumCatalogNumber) {
+		this.albumCatalogNumber = albumCatalogNumber;
+	}
+
+	public String getAlbumEdition() {
+		return albumEdition;
+	}
+
+	public void setAlbumEdition(String albumEdition) {
+		this.albumEdition = albumEdition;
+	}
+
+	public int getAlbumQuantity() {
+		return albumQuantity;
+	}
+
+	public void setAlbumQuantity(int albumQuantity) {
+		this.albumQuantity = albumQuantity;
+	}
+
+	public Artist getArtist() {
+		return artist;
+	}
+
+	public void setArtist(Artist artist) {
+		this.artist = artist;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Album [id_album=" + id_album + ", albumTitle=" + albumTitle + ", albumReleaseYear=" + albumReleaseYear
+				+ ", albumCoverArt=" + albumCoverArt + ", albumPrice=" + albumPrice + ", albumCatalogNumber="
+				+ albumCatalogNumber + ", albumEdition=" + albumEdition + ", albumQuantity=" + albumQuantity
+				+ ", artist=" + artist + ", tracks=" + tracks + "]";
+	}
+
+
+
+
+	
+
+	
+	
 	
 	
 	

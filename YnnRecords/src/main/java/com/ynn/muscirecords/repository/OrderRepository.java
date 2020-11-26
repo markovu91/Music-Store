@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.ynn.muscirecords.model.Order;
 
-public interface OrderRepository extends JpaRepository<Integer, Order>{
+public interface OrderRepository extends JpaRepository<Order, Integer>{
 	
 	
 
