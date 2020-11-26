@@ -21,4 +21,27 @@ public class Genre {
 	
 	public Genre() {}
 
+
+	public int getId_genre() {
+		return id_genre;
+	}
+
+
+	public void setId_genre(int id_genre) {
+		this.id_genre = id_genre;
+	}
+
+
+	public String getGenreName() {
+		return genreName;
+	}
+
+
+	public void setGenreName(String genreName) {
+		this.genreName = genreName;
+	}
+	
+	
+	
+
 }
