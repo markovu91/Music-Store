@@ -5,17 +5,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light p-0 d-flex justify-content-around" th:fragment="topbar">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light p-0" th:fragment="topbar">
 		<div class="collapse navbar-collapse">
-			<ul class="navbar-nav">
-				<li class="mav-item">
-					<a class="nav-link ml-auto" th:href="@{/}">Home</a>
+			<ul class="navbar-nav d-flex justify-content-around w-100">
+				<li class="mav-item flex-fill text-center">
+					<a class="nav-link mr-auto" th:href="@{/}">Home</a>
 				</li>
-				<li class="mav-item">
-					<a class="nav-link ml-auto" th:href="@{/}">About</a>
+				<li class="mav-item flex-fill text-center">
+					<a class="nav-link mr-auto" th:href="@{/}">About</a>
 				</li>
-				<li class="mav-item">
-					<a class="nav-link ml-auto" th:href="@{/}">Contact</a>
+				<li class="mav-item flex-fill text-center">
+					<a class="nav-link mr-auto flex-fill" th:href="@{/}">Contact</a>
 				</li>
 			</ul>
 		</div>
