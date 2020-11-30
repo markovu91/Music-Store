@@ -5,20 +5,33 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light p-0" th:fragment="topbar">
-		<div class="collapse navbar-collapse">
-			<ul class="navbar-nav d-flex justify-content-around w-100">
-				<li class="mav-item flex-fill text-center">
-					<a class="nav-link mr-auto" th:href="@{/}">Home</a>
-				</li>
-				<li class="mav-item flex-fill text-center">
-					<a class="nav-link mr-auto" th:href="@{/}">About</a>
-				</li>
-				<li class="mav-item flex-fill text-center">
-					<a class="nav-link mr-auto flex-fill" th:href="@{/}">Contact</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" th:fragment="topbar">
+  <div class="container">
+    <a class="navbar-brand m-3" href="#">
+          <img src="http://placehold.it/150x50?text=Logo" alt="">
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active m-3">
+          <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+        </li>
+        <li class="nav-item m-3">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item m-3">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item m-3">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </body>
 </html>

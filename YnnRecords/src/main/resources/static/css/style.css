@@ -1,5 +1,10 @@
 .navbar{
+	background-color: #20576b !important;
 	
-	height: 20px;
-	background-color: blue;	
+}
+
+.nav-item{
+	font-family: monospace;
+	font-size: xx-large;
+	
 }
