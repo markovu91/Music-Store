@@ -4,7 +4,11 @@
 }
 
 .nav-item{
-	font-family: monospace;
-	font-size: xx-large;
+	font-family: Roboto;
+	font-size: 1rem;
 	
+}
+
+nav {
+	height: 86px;
 }

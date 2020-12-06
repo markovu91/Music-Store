@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html layout:decorate="~{/layout/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Welcome to Online Music Store</title>
+</head>
+<body>
+	<div layout:fragment="content">
+	<div>
+	<img  th:src="@{{path}(path=${album.albumCoverArt})}" width="1000"  alt="..."> 
+	</div>
+	Catalog number: <p th:text="${album.albumCatalogNumber}"></p>
+	Album title:	<p th:text="${album.albumTitle}"></p>
+	Album edition:	<p th:text="${album.albumEdition}"></p>
+	Album price:	<p th:text="${album.albumPrice} + ' ' + €"></p>
+	</div>
+</body>
+</html>

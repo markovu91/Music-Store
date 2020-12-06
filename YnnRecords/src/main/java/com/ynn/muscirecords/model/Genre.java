@@ -23,8 +23,8 @@ public class Genre implements Serializable {
 	@Column(name = "genre_name")
 	private String genreName;
 	
-	@OneToMany(mappedBy = "genre")
-	private List<Artist> artists;
+//	@OneToMany(mappedBy = "genre")
+//	private List<Artist> artists;
 	
 	
 	
@@ -51,20 +51,20 @@ public class Genre implements Serializable {
 	}
 
 
-	public List<Artist> getArtists() {
-		return artists;
-	}
+//	public List<Artist> getArtists() {
+//		return artists;
+//	}
+//
+//
+//	public void setArtists(List<Artist> artists) {
+//		this.artists = artists;
+//	}
 
 
-	public void setArtists(List<Artist> artists) {
-		this.artists = artists;
-	}
-
-
-	@Override
-	public String toString() {
-		return "Genre [id_genre=" + id_genre + ", genreName=" + genreName + ", artists=" + artists + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Genre [id_genre=" + id_genre + ", genreName=" + genreName + ", artists=" + artists + "]";
+//	}
 	
 	
 	

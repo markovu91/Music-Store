@@ -11,5 +11,6 @@ import com.ynn.muscirecords.model.Artist;
 public interface AlbumService {
 
 	List<Album> getAllAlbums();
-	Artist getArtist();
+	Album getAlbumById(Integer id);
+
 }

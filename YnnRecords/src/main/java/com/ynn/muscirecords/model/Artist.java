@@ -34,9 +34,9 @@ public class Artist implements Serializable {
 	@OneToMany(mappedBy = "artist")
 	private List<Album> albums;
 	
-	@ManyToOne
-	@JoinColumn(name = "id_genre")
-	private Genre genre;
+//	@ManyToOne
+//	@JoinColumn(name = "id_genre")
+//	private Genre genre;
 	
 	
 	public Artist() {}
@@ -44,16 +44,16 @@ public class Artist implements Serializable {
 	
 	
 	
-	public Artist(int id_artist, String artistName, String artistDescription, int artistFormationYear,
-			List<Album> albums, Genre genre) {
-		super();
-		this.id_artist = id_artist;
-		this.artistName = artistName;
-		this.artistDescription = artistDescription;
-		this.artistFormationYear = artistFormationYear;
-		this.albums = albums;
-		this.genre = genre;
-	}
+//	public Artist(int id_artist, String artistName, String artistDescription, int artistFormationYear,
+//			List<Album> albums, Genre genre) {
+//		super();
+//		this.id_artist = id_artist;
+//		this.artistName = artistName;
+//		this.artistDescription = artistDescription;
+//		this.artistFormationYear = artistFormationYear;
+//		this.albums = albums;
+//		this.genre = genre;
+//	}
 
 
 
@@ -104,25 +104,25 @@ public class Artist implements Serializable {
 
 
 
-	public Genre getGenre() {
-		return genre;
-	}
+//	public Genre getGenre() {
+//		return genre;
+//	}
+//
+//
+//
+//	public void setGenre(Genre genre) {
+//		this.genre = genre;
+//	}
+//
 
 
 
-	public void setGenre(Genre genre) {
-		this.genre = genre;
-	}
-
-
-
-
-	@Override
-	public String toString() {
-		return "Artist [id_artist=" + id_artist + ", artistName=" + artistName + ", artistDescription="
-				+ artistDescription + ", artistFormationYear=" + artistFormationYear + ", albums=" + albums + ", genre="
-				+ genre + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Artist [id_artist=" + id_artist + ", artistName=" + artistName + ", artistDescription="
+//				+ artistDescription + ", artistFormationYear=" + artistFormationYear + ", albums=" + albums + ", genre="
+//				+ genre + "]";
+//	}
 	
 	
 	
