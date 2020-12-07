@@ -33,12 +33,7 @@ public class HomeController {
 	public String store(Model model) {
 		List<Album> albums = new ArrayList<>();
 		albums = albumService.getAllAlbums();
-		Artist artist=null;
-		for(Album album:albums) {
-			artist = album.getArtist();
-		}
 		model.addAttribute("albums", albums);
-		model.addAttribute("artist", artist);
 		return "store";
 		
 	}

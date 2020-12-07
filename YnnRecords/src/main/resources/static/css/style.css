@@ -12,3 +12,7 @@
 nav {
 	height: 86px;
 }
+
+table td {
+	padding:1rem;
+}

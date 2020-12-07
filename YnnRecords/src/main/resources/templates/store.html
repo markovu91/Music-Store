@@ -11,7 +11,7 @@
 					<div class="card m-2" style="width: 14rem;">
    <img  th:src="@{{path}(path=${album.albumCoverArt})}" width="1000" class="card-img-top" alt="..."> 
   <div class="card-body">
-  	Artist: <h5 class="card-title" th:text="${artist.artistName}"></h5>
+  	Artist: <h5 class="card-title" th:text="${album.artist.artistName}"></h5>
     Album title: <h5 class="card-title" th:text="${album.albumTitle}"></h5>
     Album price:<p class="card-text" th:text="${album.albumPrice} + ' ' + €"></p>
     <a th:href="@{/albumDetails/{id}(id=${album.id_album})}" class="btn btn-primary btn-sm">Details</a> 

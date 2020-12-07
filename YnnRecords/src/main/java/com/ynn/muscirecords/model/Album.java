@@ -3,6 +3,7 @@ package com.ynn.muscirecords.model;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -51,7 +52,7 @@ public class Album implements Serializable {
 	private Artist artist;
 	
 	@OneToMany(mappedBy = "album")
-	private Set<Track> tracks;
+	private List<Track> tracks;
 	
 	
 	public Album() {}
@@ -147,12 +148,14 @@ public class Album implements Serializable {
 	}
 
 
-	public Set<Track> getTracks() {
+
+
+	public List<Track> getTracks() {
 		return tracks;
 	}
 
 
-	public void setTracks(Set<Track> tracks) {
+	public void setTracks(List<Track> tracks) {
 		this.tracks = tracks;
 	}
 
