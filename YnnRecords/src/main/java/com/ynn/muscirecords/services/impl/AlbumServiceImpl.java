@@ -33,6 +33,12 @@ public class AlbumServiceImpl implements AlbumService{
 		} else {throw new RuntimeException("Album not found for id :: "+id);}
 		return album;
 	}
+
+	@Override
+	public List<Album> getAlbumsByArtist(Artist artist) {
+		List<Album> albumsByArtist = albumRepository.findByArtist(artist);
+		return albumsByArtist;
+	}
 	
 	
 

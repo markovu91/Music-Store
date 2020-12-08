@@ -16,3 +16,19 @@ nav {
 table td {
 	padding:1rem;
 }
+
+.album-details{
+	justify-content: center;
+	display: flex;
+	flex-flow: row;
+}
+
+.album-details-artwork{
+	margin-right: 50px;
+	margin-bottom: 50px;
+}
+
+.tracks{
+	display: flex;
+	flex-direction: column;	
+}

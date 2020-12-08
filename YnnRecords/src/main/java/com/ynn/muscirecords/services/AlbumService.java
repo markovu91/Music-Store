@@ -12,5 +12,6 @@ public interface AlbumService {
 
 	List<Album> getAllAlbums();
 	Album getAlbumById(Integer id);
+	List<Album> getAlbumsByArtist(Artist artist);
 
 }

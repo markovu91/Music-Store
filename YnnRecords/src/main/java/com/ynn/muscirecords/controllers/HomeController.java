@@ -21,6 +21,7 @@ public class HomeController {
 	@Autowired
 	private AlbumService albumService;
 	
+	
 
 	
 	@RequestMapping("/")
@@ -41,7 +42,10 @@ public class HomeController {
 	@GetMapping("/albumDetails/{id}")
 	public String albumDetails(@PathVariable(value = "id") Integer id, Model model) {
 		Album album = albumService.getAlbumById(id);
+		Artist artist = album.getArtist();
+		List<Album> albums = albumService.getAlbumsByArtist(artist);
 		model.addAttribute("album", album);
+		model.addAttribute("albums", albums);
 		return "albumDetails";
 	}
 	
