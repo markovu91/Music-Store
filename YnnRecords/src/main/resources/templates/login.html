@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>KK MusicStore - Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link th:href ="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" media="screen" >
+<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}" ></script> 
+<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div class="container-fluid p-0">
+		<div class="login-box">
+			<form th:action="@{/login}" method="POST">
+                 <div class="field-box">
+                 	<input type="text" name="username" id="username" placeholder="Username" onfocus = "this.placeholder = ''" onblur="this.placeholder = 'Username'"/>
+                    <input type="password" name="password" id="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder= 'Password'"/>
+                 </div>
+                <input type="submit" name="login-submit" id="login-submit" class="button" value="Login"/>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
