@@ -46,7 +46,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 			.permitAll()
 			.invalidateHttpSession(true)
 			.clearAuthentication(true);	
+		
 	}
+	
+	
 	
 	@Bean
     public BCryptPasswordEncoder passwordEncoder(){
