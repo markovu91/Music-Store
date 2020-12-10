@@ -12,7 +12,7 @@ public class YnnRecordsApplication {
 		
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         
-        
+        System.out.println("Admin pass:");
         System.out.println(passwordEncoder.encode("admin"));
 	}
 
