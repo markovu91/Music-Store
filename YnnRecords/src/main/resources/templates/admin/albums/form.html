@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html layout:decorate="~{admin/layout/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">New albumt</h1>
+        </div>
+        <form th:action="@{/admin/albums/{action}(action = ${action})}" th:object="${albumDTO}" method="post">
+        	<div class=:form-group>
+        		<label for="albumTitle">Album title</label>
+        		<input type="text" class="form-control w-auto" id="albumTitle" th:field="*{albumTitle}">
+        	</div>
+        	 <div class="form-group">
+                    <label for="artist">Artists</label>
+                    <select id="artist" class="form-control" name="artist" th:field="*{artistName}">
+                        <option th:each="artist:${artists}" th:value="${artist}" th:text="${artist}"></option>
+                    </select>                  
+                </div>
+        	<div class=:form-group>
+        		<label for="albumReleaseYear">Release year</label>
+        		<input type="text" class="form-control" id="albumReleaseYear" th:field="*{albumReleaseYear}">
+        	</div>
+        	<div class=:form-group>
+        		<label for="albumCoverArt">Cover art path</label>
+        		<input type="text" class="form-control" id="albumCoverArt" th:field="*{albumCoverArt}">
+        	</div>
+        	<div class=:form-group>
+        		<label for="albumPrice">Price</label>
+        		<input type="text" class="form-control" id="albumPrice" th:field="*{albumPrice}">
+        	</div>
+        	<div class=:form-group>
+        		<label for="albumCatalogNumber">Catalog number</label>
+        		<input type="text" class="form-control" id="albumCatalogNumber" th:field="*{albumCatalogNumber}">
+        	</div>
+        	<div class=:form-group>
+        		<label for="albumEdition">Edition</label>
+        		<input type="text" class="form-control" id="albumEdition" th:field="*{albumEdition}">
+        	</div>
+        	<div class=:form-group>
+        		<label for="albumQuantity">Quantity</label>
+        		<input type="text" class="form-control" id="albumQuantity" th:field="*{albumQuantity}">
+        	</div>
+        	
+        	
+        	
+                <input type="submit" class="btn btn-primary" value="Save"/>
+        </form>
+
+	</div>
+
+</body>
+</html>

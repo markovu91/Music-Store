@@ -20,7 +20,7 @@ public class Artist implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id_artist")
-	private int id_artist;
+	private int idArtist;
 	
 	@Column(name="artist_name")
 	private String artistName;
@@ -34,9 +34,9 @@ public class Artist implements Serializable {
 	@OneToMany(mappedBy = "artist")
 	private List<Album> albums;
 	
-//	@ManyToOne
-//	@JoinColumn(name = "id_genre")
-//	private Genre genre;
+	@ManyToOne
+	@JoinColumn(name = "id_genre")
+	private Genre genre;
 	
 	
 	public Artist() {}
@@ -44,31 +44,35 @@ public class Artist implements Serializable {
 	
 	
 	
-//	public Artist(int id_artist, String artistName, String artistDescription, int artistFormationYear,
-//			List<Album> albums, Genre genre) {
-//		super();
-//		this.id_artist = id_artist;
-//		this.artistName = artistName;
-//		this.artistDescription = artistDescription;
-//		this.artistFormationYear = artistFormationYear;
-//		this.albums = albums;
-//		this.genre = genre;
-//	}
-
-
-
-
-	public int getId_artist() {
-		return id_artist;
+	public Artist(int id_artist, String artistName, String artistDescription, int artistFormationYear,
+			List<Album> albums, Genre genre) {
+		super();
+		this.idArtist = id_artist;
+		this.artistName = artistName;
+		this.artistDescription = artistDescription;
+		this.artistFormationYear = artistFormationYear;
+		this.albums = albums;
+		this.genre = genre;
 	}
 
-	public void setId_artist(int id_artist) {
-		this.id_artist = id_artist;
+
+
+
+	public int getIdArtist() {
+		return idArtist;
 	}
+
+
+
+	public void setIdArtist(int idArtist) {
+		this.idArtist = idArtist;
+	}
+
 
 	public String getArtistName() {
 		return artistName;
 	}
+
 
 	public void setArtistName(String artistName) {
 		this.artistName = artistName;
@@ -104,25 +108,25 @@ public class Artist implements Serializable {
 
 
 
-//	public Genre getGenre() {
-//		return genre;
-//	}
-//
-//
-//
-//	public void setGenre(Genre genre) {
-//		this.genre = genre;
-//	}
-//
+	public Genre getGenre() {
+		return genre;
+	}
 
 
 
-//	@Override
-//	public String toString() {
-//		return "Artist [id_artist=" + id_artist + ", artistName=" + artistName + ", artistDescription="
-//				+ artistDescription + ", artistFormationYear=" + artistFormationYear + ", albums=" + albums + ", genre="
-//				+ genre + "]";
-//	}
+	public void setGenre(Genre genre) {
+		this.genre = genre;
+	}
+
+
+
+
+	@Override
+	public String toString() {
+		return "Artist [id_artist=" + idArtist + ", artistName=" + artistName + ", artistDescription="
+				+ artistDescription + ", artistFormationYear=" + artistFormationYear + ", albums=" + albums + ", genre="
+				+ genre + "]";
+	}
 	
 	
 	

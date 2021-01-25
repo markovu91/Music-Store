@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+    </head>
+    <body>
+        <nav th:fragment="pagination(page)">
+            <ul class="pagination justify-content-end">
+                <li class="page-item" th:classappend="${page.number eq 0} ? 'disabled'">
+                    <a class="page-link" th:href = "@{/admin/artists(page=${page.number lt 1 ? 0 : page.number}, sort = ${page?.sort?.getOrderFor('id')?.ascending} ? 'id,desc' : 'id,asc', size = ${page.size})}">Previous</a>
+                </li>
+               
+            </ul>
+        </nav>
+    </body>
+</html>

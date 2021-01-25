@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html layout:decorate="~{admin/layout/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<body>
+		<div layout:fragment="content">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">New genre</h1>
+            </div>
+            <form th:action="@{/admin/genres/{action}(action = ${action})}" th:object="${genre}" method="post">
+                <div class="form-group">
+                    <label for="genreName">Genre</label>
+                    <input type="text" class="form-control w-auto" id="genreName" th:field="*{genreName}"/>
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Save"/>
+			</form>
+		</div>
+	</body>
+</html>

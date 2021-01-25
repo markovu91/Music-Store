@@ -5,12 +5,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" th:fragment="topbar">
-	<a class="navbar-brand col-sm-3 col-md-2 mr-0" th:href="@{/admin}">Music Store Administrator</a>
+<nav class="navbar navbar-dark static-top bg-dark flex-md-nowrap p-0 shadow mb-1" th:fragment="topbar">
+	<a class="navbar-brand col-sm-3 col-md-2 mr-0 m-auto" th:href="@{/admin}">Music Store Administrator</a>
 	<ul class="navbar-nav px-3">
             <li class="nav-item text-nowrap">
                 <form th:action="@{/logout}" method="post">
-                    <input type="submit" value="Logout"/>
+                    <input class="btn bg-danger text-white m-2"  type="submit" value="Logout"/>
                 </form>
             </li>
         </ul>

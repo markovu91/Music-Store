@@ -11,7 +11,8 @@ import com.ynn.muscirecords.model.User;
 public interface UserService extends UserDetailsService {
 
 	User findByUserName(String username);
-
+	List<User> findAll();
+	public void deleteUser(Integer id);
 	List<User> getByRolee(Role role);
 	
 	User getCurrentlyLoggedInUser();

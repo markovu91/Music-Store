@@ -1,0 +1,12 @@
+- [ ] Core
+	- [ ] Home page
+		- [ ] Carousel for recent album additions
+	- [ ] Footer
+- [ ] Admin
+	- [ ] CRUD (Pagination, Table)
+		- [ ] Artist
+		- [ ] Album
+		- [ ] Track
+		- [ ] Genre
+		- [ ] Users (only read and delete)
+- [ ] User
