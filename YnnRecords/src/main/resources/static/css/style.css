@@ -34,7 +34,38 @@ table td {
 }
 
 
+/* sidenav css */
 
+.sidenav {
+	height: 100%;
+	border-right:black 1px;
+	border-right-width:thick;
+
+}
+
+.sidenav ul {
+	list-style-type: none;
+}
+
+#albums {
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.sidenav h5 {
+	text-align:center;
+	margin-bottom: 20px;
+}
+
+.sidenav li {
+	margin-left:80px;
+	padding:2px;
+}
+
+
+.container-fluid{
+	height:100%;
+}
 
 
 /*cart */

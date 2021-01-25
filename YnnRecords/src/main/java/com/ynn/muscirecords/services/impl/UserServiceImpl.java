@@ -4,8 +4,11 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -17,6 +20,9 @@ import com.ynn.muscirecords.services.UserService;
 
 @Service
 public class UserServiceImpl implements UserService{
+	
+	
+	
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -48,6 +54,14 @@ public class UserServiceImpl implements UserService{
 	public List<User> getByRolee(Role role) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public User getCurrentlyLoggedInUser() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		User user = (User) authentication.getPrincipal();
+		return user;
+		
 	}
 
 }

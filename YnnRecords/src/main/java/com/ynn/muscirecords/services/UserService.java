@@ -13,5 +13,7 @@ public interface UserService extends UserDetailsService {
 	User findByUserName(String username);
 
 	List<User> getByRolee(Role role);
+	
+	User getCurrentlyLoggedInUser();
 
 }

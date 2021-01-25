@@ -8,8 +8,17 @@
 		
 		
 		<div layout:fragment="content">
-			<div class="m-5" style="display:flex; flex-wrap:wrap; justify-content:center">
-				<div th:each="album : ${albums}">
+			<div class="row content">
+			
+			<div class="col-sm-3 sidenav ml-5 border-right">
+			<h5>Album Category</h5>
+				<ul th:each="genre:${genres}">
+					<a th:href="@{/}"><li th:text="${genre.genreName}"></li></a>
+				</ul>
+			</div>
+			<div id="albums" class="col-sm-8">
+			
+				<div th:each="album : ${albums}" >
 					<div class="card m-2" style="width: 14rem;">
    <img  th:src="@{{path}(path=${album.albumCoverArt})}" width="1000" class="card-img-top" alt="..."> 
   <div class="card-body">
@@ -23,12 +32,18 @@
   </div>
 </div>
 				</div>
+			
+	
+			
 			</div>
 		
-		
+
 		
 		
 		</div>
+
+
+</div>
 
 </body>
 </html>

@@ -17,7 +17,7 @@ public class Genre implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="genre_id")
+	@Column(name="id_genre")
 	private int id_genre;
 	
 	@Column(name = "genre_name")

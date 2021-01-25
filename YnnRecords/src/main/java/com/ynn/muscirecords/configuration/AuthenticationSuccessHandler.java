@@ -33,6 +33,10 @@ public class AuthenticationSuccessHandler implements org.springframework.securit
                 targetUrl = "/admin/";
                 break;
             }
+            if(grantedAuthority.getAuthority().equals(Role.USER)){
+                targetUrl = "/cart";
+                break;
+            }
            
         }
         

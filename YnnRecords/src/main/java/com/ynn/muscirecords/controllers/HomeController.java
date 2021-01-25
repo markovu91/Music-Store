@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ynn.muscirecords.model.Album;
 import com.ynn.muscirecords.model.Artist;
+import com.ynn.muscirecords.model.Genre;
 import com.ynn.muscirecords.services.AlbumService;
 import com.ynn.muscirecords.services.ArtistService;
+import com.ynn.muscirecords.services.GenreService;
 
 @Controller
 public class HomeController {
@@ -21,7 +23,8 @@ public class HomeController {
 	@Autowired
 	private AlbumService albumService;
 	
-	
+	@Autowired
+	private GenreService genreService;
 
 	
 	@RequestMapping("/")
@@ -34,6 +37,8 @@ public class HomeController {
 	public String store(Model model) {
 		List<Album> albums = new ArrayList<>();
 		albums = albumService.getAllAlbums();
+		List<Genre> genres = genreService.getAllGenres();
+		model.addAttribute("genres", genres);
 		model.addAttribute("albums", albums);
 		return "store";
 		

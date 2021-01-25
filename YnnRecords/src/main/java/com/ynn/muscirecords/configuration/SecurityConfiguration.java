@@ -36,6 +36,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.csrf().disable()
 			.authorizeRequests()
 			.antMatchers("/admin/**").hasAuthority(Role.ADMIN)
+			.antMatchers("/cart").hasAuthority(Role.USER)
 			.and()
 			.formLogin()
 				.loginPage("/login")
