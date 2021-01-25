@@ -18,11 +18,8 @@ public class Genre implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_genre")
-<<<<<<< HEAD
-	private int id_genre;
-=======
 	private int idGenre;
->>>>>>> 832a70893d57a4c291804ade0f6f446826d52614
+
 	
 	@Column(name = "genre_name")
 	private String genreName;

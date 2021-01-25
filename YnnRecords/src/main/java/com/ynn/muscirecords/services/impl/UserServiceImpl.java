@@ -64,4 +64,10 @@ public class UserServiceImpl implements UserService{
 		
 	}
 
+	@Override
+	public User getCurrentlyLoggedInUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

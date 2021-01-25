@@ -36,8 +36,8 @@ public class HomeController {
 	@GetMapping("/store")
 	public String store(Model model) {
 		List<Album> albums = new ArrayList<>();
-		albums = albumService.getAllAlbums();
-		List<Genre> genres = genreService.getAllGenres();
+		albums = albumService.findAllAlbums();
+		List<Genre> genres = genreService.findAll();
 		model.addAttribute("genres", genres);
 		model.addAttribute("albums", albums);
 		return "store";

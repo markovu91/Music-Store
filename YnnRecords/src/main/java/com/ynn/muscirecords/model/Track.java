@@ -18,7 +18,7 @@ public class Track implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_track")
-	private int trackId;
+	private int idTrack;
 	
 	@Column(name="track_number")
 	private int trackNumber;
@@ -41,19 +41,20 @@ public class Track implements Serializable{
 
 	public Track(int trackId, int trackNumber, String trackTitle, double trackPrice, Album album) {
 		super();
-		this.trackId = trackId;
+		this.idTrack = trackId;
 		this.trackNumber = trackNumber;
 		this.trackTitle = trackTitle;
 		this.trackPrice = trackPrice;
 		this.album = album;
 	}
 
-	public int getTrackId() {
-		return trackId;
+
+	public int getIdTrack() {
+		return idTrack;
 	}
 
-	public void setTrackId(int trackId) {
-		this.trackId = trackId;
+	public void setIdTrack(int idTrack) {
+		this.idTrack = idTrack;
 	}
 
 	public int getTrackNumber() {
@@ -90,7 +91,7 @@ public class Track implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Track [trackId=" + trackId + ", trackNumber=" + trackNumber + ", trackTitle=" + trackTitle
+		return "Track [trackId=" + idTrack + ", trackNumber=" + trackNumber + ", trackTitle=" + trackTitle
 				+ ", trackPrice=" + trackPrice + ", album=" + album + "]";
 	}
 	
