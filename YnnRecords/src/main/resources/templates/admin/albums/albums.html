@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html layout:decorate="~{admin/layout/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<div class="d-flex flex-row">
+			<h1 class="mt-2 mb-2 mr-auto">Albums</h1>
+			<a class="btn btn-sm h-25 bg-success text-light text-center mb-auto mt-auto" th:href="@{/admin/albums/new}">New Album</a>
+		</div>
+		<div class="table-responsive">
+		  <table class="table table-striped table-sm table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">Title</th>
+                            <th class="text-center">Artist</th>
+                            <th class="text-center">Release year</th>
+                            <th class="text-center">Covert art path</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Catalog number</th>
+                            <th class="text-center">Edition</th>
+                            <th class="text-center">Quantity</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="album: ${albums}">
+                            <td class="text-center" th:text="${album.idAlbum}"/>
+                            <td class="text-center" th:text="${album.albumTitle}"/>
+                            <td class="text-center" th:text="${album.artist.artistName}"/>
+                            <td class="text-center" th:text="${album.albumReleaseYear}"/>
+                            <td class="text-center" th:text="${album.albumCoverArt}"/>
+                            <td class="text-center" th:text="${album.albumPrice}"/>
+                            <td class="text-center" th:text="${album.albumCatalogNumber}"/>
+                            <td class="text-center" th:text="${album.albumEdition}"/>
+                            <td class="text-center" th:text="${album.albumQuantity}"/>
+                            <td>                        
+                                <a class="btn btn-sm btn-outline-secondary bg-warning text-dark" th:href="@{/admin/}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                               
+                                </a>
+                                <a class="btn btn-sm btn-outline-dange bg-danger text-light" data-toggle="tooltip" data-placement="top" title="Delete"  th:href="@{/admin/albums/delete/{id}(id=${album.idAlbum})}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>  
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table> 
+		
+		
+		
+		
+		
+		
+		</div>
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</div>
+
+</body>
+</html>

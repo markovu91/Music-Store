@@ -24,7 +24,7 @@ public class Album implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id_album")
-	private int id_album;
+	private int idAlbum;
 	
 	@Column(name = "album_title")
 	private String albumTitle;
@@ -58,14 +58,20 @@ public class Album implements Serializable {
 	public Album() {}
 
 
-	public int getId_album() {
-		return id_album;
+
+
+	public int getIdAlbum() {
+		return idAlbum;
 	}
 
 
-	public void setId_album(int id_album) {
-		this.id_album = id_album;
+
+
+	public void setIdAlbum(int idAlbum) {
+		this.idAlbum = idAlbum;
 	}
+
+
 
 
 	public String getAlbumTitle() {
@@ -162,7 +168,7 @@ public class Album implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Album [id_album=" + id_album + ", albumTitle=" + albumTitle + ", albumReleaseYear=" + albumReleaseYear
+		return "Album [id_album=" + idAlbum + ", albumTitle=" + albumTitle + ", albumReleaseYear=" + albumReleaseYear
 				+ ", albumCoverArt=" + albumCoverArt + ", albumPrice=" + albumPrice + ", albumCatalogNumber="
 				+ albumCatalogNumber + ", albumEdition=" + albumEdition + ", albumQuantity=" + albumQuantity
 				+ ", artist=" + artist + ", tracks=" + tracks + "]";

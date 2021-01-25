@@ -17,28 +17,34 @@ public class Genre implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="genre_id")
-	private int id_genre;
+	@Column(name="id_genre")
+	private int idGenre;
 	
 	@Column(name = "genre_name")
 	private String genreName;
 	
-//	@OneToMany(mappedBy = "genre")
-//	private List<Artist> artists;
+	@OneToMany(mappedBy = "genre")
+	private List<Artist> artists;
 	
 	
 	
 	public Genre() {}
 
 
-	public int getId_genre() {
-		return id_genre;
+	
+
+	public int getIdGenre() {
+		return idGenre;
 	}
 
 
-	public void setId_genre(int id_genre) {
-		this.id_genre = id_genre;
+
+
+	public void setIdGenre(int idGenre) {
+		this.idGenre = idGenre;
 	}
+
+
 
 
 	public String getGenreName() {

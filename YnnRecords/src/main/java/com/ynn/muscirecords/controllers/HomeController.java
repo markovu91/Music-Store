@@ -33,7 +33,7 @@ public class HomeController {
 	@GetMapping("/store")
 	public String store(Model model) {
 		List<Album> albums = new ArrayList<>();
-		albums = albumService.getAllAlbums();
+		albums = albumService.findAllAlbums();
 		model.addAttribute("albums", albums);
 		return "store";
 		

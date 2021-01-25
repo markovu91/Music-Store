@@ -52,8 +52,8 @@
 	<div class="d-flex flex-row">
 	
 	
-	<div class="d-flex flex-wrap ml-1" th:each="album : ${albums}" th:if="${album.id_album} != ${id}">
-		<a th:href="@{/albumDetails/{id}(id=${album.id_album})}"><img width = "150" th:src="@{{path}(path=${album.albumCoverArt})}" alt="..."></a>
+	<div class="d-flex flex-wrap ml-1" th:each="album : ${albums}" th:if="${album.idAlbum} != ${id}">
+		<a th:href="@{/albumDetails/{id}(id=${album.idAlbum})}"><img width = "150" th:src="@{{path}(path=${album.albumCoverArt})}" alt="..."></a>
 	</div>
 	
 	

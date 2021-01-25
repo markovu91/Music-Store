@@ -50,4 +50,18 @@ public class UserServiceImpl implements UserService{
 		return null;
 	}
 
+	@Override
+	public List<User> findAll() {
+		List<User> users = userRepository.findAll();
+		return users;
+	}
+
+	@Override
+	public void deleteUser(Integer id) {
+		if(id != null) {
+			userRepository.deleteById(id);
+		}
+		
+	}
+
 }
