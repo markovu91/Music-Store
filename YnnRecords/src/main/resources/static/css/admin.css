@@ -5,3 +5,10 @@
 .nav-link{
 	color: black;
 }
+
+td{
+	padding: 0 !important;
+}
+tr{
+	padding: auto !important;
+}

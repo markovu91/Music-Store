@@ -1,6 +1,7 @@
 package com.ynn.muscirecords.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -10,6 +11,7 @@ import com.ynn.muscirecords.model.Artist;
 public interface AlbumRepository extends JpaRepository<Album, Integer> {
 	
 	List<Album> findByArtist(Artist artist);
+
 
 	
 	

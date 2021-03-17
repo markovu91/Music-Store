@@ -24,13 +24,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.ynn.muscirecords.model.Album;
 import com.ynn.muscirecords.model.Artist;
 import com.ynn.muscirecords.model.Genre;
+import com.ynn.muscirecords.model.Track;
 import com.ynn.muscirecords.model.User;
 import com.ynn.muscirecords.model.DTO.AlbumDTO;
 import com.ynn.muscirecords.model.DTO.ArtistDTO;
+import com.ynn.muscirecords.model.DTO.TrackDTO;
+import com.ynn.muscirecords.repository.AlbumRepository;
 import com.ynn.muscirecords.repository.ArtistRepository;
 import com.ynn.muscirecords.services.AlbumService;
 import com.ynn.muscirecords.services.ArtistService;
 import com.ynn.muscirecords.services.GenreService;
+import com.ynn.muscirecords.services.TrackService;
 import com.ynn.muscirecords.services.UserService;
 
 @Controller
@@ -45,6 +49,9 @@ public class AdminController {
 	
 	@Autowired
 	AlbumService albumService;
+	
+	@Autowired
+	TrackService trackService;
 	
 	@Autowired
 	UserService userService;
@@ -151,7 +158,42 @@ public class AdminController {
 		
 	}
 	
+	//TRACKS
+	@GetMapping("/albums/{id}/tracks")
+	public String listTracks(@PathVariable Integer id, Model model) {
+		
+		Album album = albumService.getAlbumById(id);
+		List<Track> tracks = trackService.getAllTracksByAlbum(album);
+		
+		model.addAttribute("album", album);
+		model.addAttribute("tracks", tracks);
+		
+		return "admin/tracks/tracks";
+		
+	}
+	@GetMapping("albums/{id}/tracks/new")
+	public String addNewTrack(Model model, @PathVariable Integer id) {
+		
+		Album album = albumService.getAlbumById(id);
+		
+		model.addAttribute("action", "new");
+		model.addAttribute("trackDTO", new TrackDTO());
+		model.addAttribute("album", album);
+		
+		
+		
+		return "admin/tracks/form";
+		
+	}
 	
+	@PostMapping("albums/{id}/tracks/new")
+	public String addNewTrack(Model model, @PathVariable Integer id, @ModelAttribute("TrackDTO") TrackDTO trackDTO) {
+		
+		
+		
+		return "redirect:/albums/{id}/tracks";
+		
+	}
 	
 	//GENRES
 	@GetMapping("/genres")

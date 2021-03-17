@@ -5,26 +5,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-<nav class="col-md-2 d-none d-md-block bg-light sidebar" th:fragment="sidebar (activeNav)">
+<nav class="col-md-2 d-none d-md-block bg-light sidebar p-0 h-100" th:fragment="sidebar (activeNav)">
  <div class="sidebar-sticky">
       <ul class="nav flex-column">
-        <li class="nav-item m-auto">
-          <a class="nav-link d-flex align-items-center mb-1" th:href="@{/}">Home</a>
+        <li class="nav-item m-auto mb-1">
+          <a class="nav-link d-flex align-items-center p-4" th:href="@{.}">Home</a>
         </li>
-         <li class="nav-item m-auto">
-          <a class="nav-link d-flex align-items-center mb-1" th:href="@{artists}">Artists</a>
+         <li class="nav-item m-auto mb-1">
+          <a class="nav-link d-flex align-items-center p-4" th:href="@{/admin/artists}">Artists</a>
         </li>
-         <li class="nav-item m-auto">
-          <a class="nav-link d-flex align-items-center mb-1" th:href="@{albums}">Albums</a>
+         <li class="nav-item m-auto mb-1">
+          <a class="nav-link d-flex align-items-center p-4" th:href="@{/admin/albums}">Albums</a>
         </li>
-        <li class="nav-item m-auto">
-          <a class="nav-link d-flex align-items-center mb-1" th:href="@{/}">Tracks</a>
+        <li class="nav-item m-auto mb-1">
+          <a class="nav-link d-flex align-items-center p-4" th:href="@{/admin/genres}">Genres</a>
         </li>
-        <li class="nav-item m-auto">
-          <a class="nav-link d-flex align-items-center mb-1" th:href="@{genres}">Genres</a>
-        </li>
-        <li class="nav-item m-auto">
-          <a class="nav-link d-flex align-items-center mb-1" th:href="@{users}">Users</a>
+        <li class="nav-item m-auto mb-1">
+          <a class="nav-link d-flex align-items-center p-4" th:href="@{/admin/users}">Users</a>
         </li>
       </ul>
     </div>		
